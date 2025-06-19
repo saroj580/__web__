@@ -33,8 +33,6 @@ function HeroSEction() {
                 start: "1% top",
                 end: "bottom top",
                 scrub: true,
-                
-                markers: true
             }
         });
         heroTimeLine.to(".hero-container", {
