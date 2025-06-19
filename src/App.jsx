@@ -12,7 +12,8 @@ function App() {
     <main>
       <Navbar />
       <HeroSEction />
-      <MessageSection/>
+      <MessageSection />
+      <div className=' h-dvh border border-red-500'></div>
     </main>
   )
 }
