@@ -18,14 +18,33 @@ const FlavorSlider = () => {
                 end: `+=${scrollAmount + 1300}px`,
                 scrub: true,
                 pin : true,
-                markers : true
             }
         })
 
         timeline.to('.flavor-section', {
             x: `-${scrollAmount + 1300}px`,
-            ease : "power1.inOut"
-        })
+            ease: "power1.inOut"
+        });
+
+        const titleTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".flavor-section",
+                start: "top top",
+                end: "bottom 80%",
+                scrub: true
+            }
+        });
+
+        titleTimeline.to(".first-text-split", {
+            xPercent: -30,
+            ease:"power1.inOut"
+        }).to(".flavor-text-scroll", {
+            xPercent: -22,
+            ease:"power1.inOut"
+        }, "<").to(".first-text-split", {
+            xPercent: -10,
+            ease:"power1.inOut"
+        }, "<")
     })
 
 
